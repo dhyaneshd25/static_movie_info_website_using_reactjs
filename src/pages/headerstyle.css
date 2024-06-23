@@ -1,0 +1,44 @@
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 100px;
+    transition: 0.5s;
+    z-index: 100;
+}
+
+header.scrolled{
+    background: black;
+    border-bottom: 2px solid var(--primary);
+    border-image: linear-gradient(90deg,transparent,var(--primary),transparent)30;
+    backdrop-filter: blur(20px);
+    padding: 10px 100px;
+}
+
+.logo{
+    font-family: 'Racing Sans One',cursive;
+    font-size: 35px;
+    color:#ffffff;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title{
+    position: relative;
+    right: -7rem;
+    height: 5px;
+    width: 500px;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--primary),
+        transparent
+    );
+}
