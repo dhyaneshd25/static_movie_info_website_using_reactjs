@@ -16,6 +16,8 @@
 }
 
 .moviewindow iframe{
+    width: 600px;
+    height: 600px;
     max-width: 1200px;
     max-height: 720px;
 }
@@ -29,7 +31,7 @@
     font-size: 1.5rem;
 }
 
-.moviewindow .active{
+.moviewindow.active{
     opacity: 1;
     visibility: visible;
 }
