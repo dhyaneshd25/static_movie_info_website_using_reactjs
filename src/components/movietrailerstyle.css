@@ -1,31 +1,33 @@
 .moviewindow{
-    position: absolute;
+    position: absolute; 
     content: '';
-    top:125px;
-    left:100px;
+    top:9rem;
+    left:3rem;
     bottom: 0;
     background-color: black;
     backdrop-filter: blur(20px);
-    z-index:200;
+    z-index:2000;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     visibility: hidden;
     transition: 1s;
+    width:600px;
+    height: 300px;
 }
 
 .moviewindow iframe{
     width: 600px;
-    height: 600px;
-    max-width: 1200px;
-    max-height: 720px;
+    height: 250px;
+    
+    z-index: 2000;
 }
 
 .moviewindow .closewindow{
     position: absolute;
-    top:30px;
-    right: 30px;
+    top:0px;
+    right: 00px;
     cursor: pointer;
     color:white;
     font-size: 1.5rem;
@@ -35,3 +37,28 @@
     opacity: 1;
     visibility: visible;
 }
+
+@media screen and (max-width:660px) {
+    .moviewindow{
+        width: 400px;
+        height: 300px;
+    }
+    .moviewindow iframe{
+        width:400px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .moviewindow{
+        top:15rem;
+        left:2rem;
+        width:300px;
+        height: 200px;
+    }
+    .moviewindow iframe{
+        width: 300px;
+        height: 160px;
+    }
+}
+

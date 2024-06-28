@@ -14,7 +14,7 @@ function Movieswiper ({slide,slidechange}){
      effect={'coverflow'}
      grabCursor={true}
      centeredSlides={true}
-     slidesPerView={'auto'}
+     slidesPerView={"auto"}
      autoplay={
         {
             delay:2500,
@@ -22,7 +22,7 @@ function Movieswiper ({slide,slidechange}){
         }
      }
      coverflowEffect={{
-        rotate:30,
+        rotate:50,
         stretch:0,
         depth:100,
         modifier:1,
@@ -34,9 +34,9 @@ function Movieswiper ({slide,slidechange}){
        >
        {
         slide.map((slide)=>{
-      return (  <SwiperSlide key={slide.ind} className="swiper-slide">
-               <img src={slide.img_name} onClick={()=>{
-                slidechange(slide.ind);
+      return (  <SwiperSlide key={slide._id} className="swiper-slide">
+               <img src={slide.previewImg} onClick={()=>{
+                slidechange(slide._id);
                 
                }}/>
             </SwiperSlide>)

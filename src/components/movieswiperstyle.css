@@ -1,28 +1,42 @@
 .swiper{
-    padding-top: 50px;
-    padding-bottom: 50px;
+   padding: 1rem 1rem;
 }
 
 .movieSwiper{
     position: absolute;
-    bottom: 20px;
+    bottom:1rem;
     left:50%;
     transform: translateX(-50%);
-    width: 60rem;
+    width: 40%;
     background: black;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 40px white;
     z-index: 200;
+    border-radius: 1rem;
 }
 
 .swiper-slide{
-    width:250px;
+    height: 15rem;
+    width: 10rem;
     border: 2px solid white;
+    border-radius:1rem ;
+    transition: all 1s ease-in-out;
 }
 
 .swiper-slide img{
     object-fit: cover;
     display: block;
-    width: 20rem;
-    height: 400px;
+    height: 15rem;
+    width: 10rem;
+    border-radius:1rem ;
+}
+
+.swiper-slide:hover{
+    scale:1.1
+}
+
+@media screen and (max-width:550px) {
+ .movieSwiper{
+    width:70%;
+ }   
 }
