@@ -5,7 +5,7 @@ import Movietrailer from "../components/movietrailer";
 function Banner () {
   const [mov,setmov]=useState([]);
   const fetchdata=()=>{
-    fetch('https://static-movie-info-website-using-reactjs-bznqxsqeq.vercel.app/data/moviedata.json')
+    fetch('https://static-movie-info-website-git-3a434b-dhyanesh-dharmiks-projects.vercel.app/data/moviedata.json')
     .then(res=>res.json())
     .then(data=>{setmov(data)})
     .catch(e=>console.log(e.message))
