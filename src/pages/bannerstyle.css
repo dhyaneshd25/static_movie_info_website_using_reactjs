@@ -5,7 +5,6 @@
     width: 100%;
     overflow: hidden;
     transition: 0.5s;
-    padding: 0 100px;
     z-index: 30;
 }
 
@@ -22,7 +21,7 @@
 }
 
 .banner .movie{
-    padding:0 5rem;
+    padding:0 3rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,8 +31,13 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    border: 2px solid red;
     padding-bottom: 10rem;
+}
+
+.banner .hd{
+    display: flex;
+    justify-content: center;
+    
 }
 
 .bgImg{ 
@@ -64,30 +68,36 @@
     align-items: flex-start;
     flex-wrap: wrap;
     position: relative;
+    left: 0;
+    top:-1rem;
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
     transition: 1s;
     z-index: 100;
+    width:50%;
+    height: 100%;
+   
 }
 
 .banner .content.active2{
     visibility: visible;
     opacity: 1;
     transform: scale(1);
+    width:50%;
+    height: 100%;
 }
 
 .movie-title{
-    width: 15rem;
-    height: 5rem;
-     margin-bottom: 1rem;
+   width: 50%;
+   height: 30%;
     transition: 2s;
  }
 
 .banner .content h4{
     color:aqua;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.3rem;
 }
 
 .banner .content h4 span{
@@ -115,7 +125,7 @@
     position: relative;
     bottom: 1rem;
     padding: 0;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 400;
       line-height: 1.5rem;
       color: white;
@@ -128,13 +138,16 @@
 .banner .date{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    position: relative;
+    position: relative; 
     visibility: hidden;
     opacity: 0;
     transform: scale(0);
     transition: 1s;
     z-index: 100;
+    width:40%;
+    border: 2px solid red;
 }
  
 .banner .date.active3{
@@ -147,16 +160,15 @@
     font-family: 'Racing Sans One',cursive;
     color: antiquewhite;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 5px white;
     -webkit-mask: linear-gradient(black 0 0),linear-gradient(black 0 0);
     -webkit-mask-clip: text,padding-box;
     -webkit-mask-composite: xor;
 }
 
-.banner .trailer{
+.banner .date .trailer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,7 +177,7 @@
     z-index: 20000;
 }
 
-.banner .trailer p{
+.banner  .date .trailer p{
     color:var(--primary);
     font-size: 1.5rem;
     margin-left: 20px;
@@ -173,7 +185,7 @@
     
 }
 
-.banner .playbtn{
+.banner .date .trailer .playbtn{
     padding: 1rem;
     position: relative;
     color: antiquewhite;
@@ -191,7 +203,7 @@
     animation: button 1s infinite;
  }
 
-.banner .playbtn ion-icon {
+.banner .date .trailer .playbtn ion-icon {
     font-size: 4rem;
     color: red;
     cursor: pointer;
@@ -199,7 +211,7 @@
     
 }
 
-.banner .playbtn::before{
+.banner .date .trailer .playbtn::before{
     position: absolute;
     top: -5px;
     right: -5px;
@@ -255,8 +267,37 @@
         width:12rem;
         height: 4rem;
     }
+
     .trailer {
      bottom: 2rem;
     }
 }
+
+@media screen and (max-width:600px) {
+    .banner .content{
+        gap:0;
+    }
+    .hd{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:0;
+       }
+       .banner .date{
+        padding: 0.2rem;
+        gap:1rem
+       }
+    .banner .date h2{
+        font-family: 'Racing Sans One',cursive;
+        color: antiquewhite;
+        text-transform: uppercase;
+        font-size: 2rem;
+        text-align: center;
+        text-shadow: 0 0 2px white;
+        -webkit-mask: linear-gradient(black 0 0),linear-gradient(black 0 0);
+        -webkit-mask-clip: text,padding-box;
+        -webkit-mask-composite: xor;
+    }
+}
+
 

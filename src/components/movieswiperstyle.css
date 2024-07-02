@@ -1,4 +1,5 @@
 .swiper{
+    height: 30%;
    padding: 1rem 1rem;
 }
 
@@ -16,8 +17,8 @@
 }
 
 .swiper-slide{
-    height: 15rem;
-    width: 10rem;
+    height: 95%;
+    width: 30%;
     border: 2px solid white;
     border-radius:1rem ;
     transition: all 1s ease-in-out;
@@ -26,8 +27,8 @@
 .swiper-slide img{
     object-fit: cover;
     display: block;
-    height: 15rem;
-    width: 10rem;
+    height: 100%;
+    width: 100%;
     border-radius:1rem ;
 }
 
@@ -39,4 +40,11 @@
  .movieSwiper{
     width:70%;
  }   
+ .swiper-slide{
+    height: 95%;
+    width: 50%;
+    border: 2px solid white;
+    border-radius:1rem ;
+    transition: all 1s ease-in-out;
+}
 }
