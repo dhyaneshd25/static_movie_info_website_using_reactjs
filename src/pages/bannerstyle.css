@@ -147,7 +147,7 @@
     transition: 1s;
     z-index: 100;
     width:40%;
-    border: 2px solid red;
+    gap:2rem
 }
  
 .banner .date.active3{
@@ -180,7 +180,7 @@
 .banner  .date .trailer p{
     color:var(--primary);
     font-size: 1.5rem;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-bottom: 0;
     
 }
@@ -194,13 +194,12 @@
     transition: 1s;
     z-index: 2000;
     background: transparent;
-    backdrop-filter: blur(20px);
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: button 1s infinite;
+   
  }
 
 .banner .date .trailer .playbtn ion-icon {
@@ -219,10 +218,9 @@
     bottom: -5px;
     content: '';
     background: transparent;
-    border: 10px solid white;
+    border: 3px solid white;
     border-radius: 50%;
-    animation: button 10s linear infinite;
-}
+  }
 
 
 
@@ -254,10 +252,6 @@
         max-height: 1.5rem;
         width:80%;
     }
- 
-    .banner .date{
-          top:-3rem;
-    }
    
     .banner .playbtn{
         width:60px;
@@ -274,7 +268,9 @@
 }
 
 @media screen and (max-width:600px) {
+    
     .banner .content{
+        top:20px;
         gap:0;
     }
     .hd{
@@ -285,15 +281,30 @@
        }
        .banner .date{
         padding: 0.2rem;
-        gap:1rem
+        position: relative;
+        top:-25px;
+        gap:2rem
        }
+       .banner  .date .trailer p{
+        color:var(--primary);
+        font-size: 1rem;
+        margin-left: 20px;
+        margin-bottom: 0;
+        
+    }
+    .banner .date .trailer .playbtn{
+        padding: 0.1rem;
+        width: 30px;
+        height: 30px;
+        border:2px;
+    }
     .banner .date h2{
         font-family: 'Racing Sans One',cursive;
         color: antiquewhite;
         text-transform: uppercase;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
-        text-shadow: 0 0 2px white;
+        text-shadow: 0 0 1px white;
         -webkit-mask: linear-gradient(black 0 0),linear-gradient(black 0 0);
         -webkit-mask-clip: text,padding-box;
         -webkit-mask-composite: xor;
